@@ -8,3 +8,11 @@ lint:
 
 lint-fix:
 	${LOCAL_BIN}/golangci-lint run ./... --config .golangci.yaml --fix
+
+get-deps:
+	go get -u google.golang.org/protobuf/cmd/protoc-gen-go
+	go get -u google.golang.org/grpc/cmd/protoc-gen-go-grpc
+
+install-deps:
+	GOBIN=$(LOCAL_BIN) go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.33.0
+	GOBIN=$(LOCAL_BIN) go install -mod=mod google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.3
