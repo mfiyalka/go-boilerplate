@@ -21,6 +21,12 @@ Create .env file:
 cp .env.example .env
 ```
 
+An example of creating a migration:
+```shell
+cd migrations && ../bin/goose create create_notes_table sql
+```
+
 ### Included
 * gRPC
-* postgres
+* PostgreSQL
+* migrations
