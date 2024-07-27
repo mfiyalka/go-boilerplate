@@ -5,3 +5,6 @@ install-golangci-lint:
 
 lint:
 	${LOCAL_BIN}/golangci-lint run ./... --config .golangci.yaml
+
+lint-fix:
+	${LOCAL_BIN}/golangci-lint run ./... --config .golangci.yaml --fix
