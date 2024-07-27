@@ -1,5 +1,11 @@
 LOCAL_BIN:=$(CURDIR)/bin
 
+docker-up:
+	docker compose up -d
+
+docker-down:
+	docker compose down --remove-orphans
+
 install-golangci-lint:
 	GOBIN=$(LOCAL_BIN) go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.59.1
 

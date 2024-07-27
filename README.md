@@ -15,3 +15,12 @@ Remove the cloned remote repository:
 ```shell
 git remote remove origin
 ```
+
+Create .env file:
+```shell
+cp .env.example .env
+```
+
+### Included
+* gRPC
+* postgres
